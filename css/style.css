@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+
+
+
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; 
+    padding:0;
+    box-sizing: border-box;
+    outline: none; 
+    border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+
+}
+
+/* navigation bar stylinging */
+nav{
+    display: flex;
+    padding: .5% 1.5%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+ 
+}
+nav img{
+    width: 141px;
+   
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+   
+
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 50px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 18px;
+}
+.nav-links ul li::after{
+    content: '';
+    width:0%;
+    height: 2px;
+    background: #fdf3f29d;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width:100%;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding:.8rem 3rem;
+    background:black;
+    color:rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+
+/* login form stylling */
+
+.login-form-container{
+    position: fixed;
+    top:105%; left:0;
+    height:100%;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:rgba(255,255,255,.9);
+    z-index: 10000;
+   
+}
+
+.login-form-container.active{
+    top:0;
+    opacity: 1;
+}
+
+.login-form-container form{
+    margin:2rem;
+    text-align: center;
+    padding:2rem;
+    width:40rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    border:var(--border);
+    background: #fff;
+ 
+}
+
+.login-form-container form .buttons{
+    display: flex;
+    gap:1rem;
+    align-items: center;
+ 
+}
+
+.login-form-container form .btn{
+    display: block;
+    width:100%;
+    margin:.5rem 0;
+}
+
+.login-form-container form .box{
+    margin:.7rem 0;
+    width: 100%;
+    font-size: 1.6rem;
+    color:var(--black);
+    text-transform: none;
+    border:var(--border);
+    padding:1rem 1.2rem;
+    border-radius: .5rem; 
+   
+}
+
+.login-form-container form p{
+    padding:1rem 0;
+    font-size: 1.5rem;
+    color:var(--light-color);
+}
+
+.login-form-container form p a{
+    color:var(--yellow);
+    text-decoration: underline;
+}
+
+.login-form-container form h3{
+    padding-bottom:1rem;
+    font-size: 2.5rem;
+    color:var(--black);
+    text-transform: uppercase;
+}
+
+.login-form-container #close-login-form{
+    position: absolute;
+    top:1.5rem; right:2.5rem;
+    font-size: 5rem;
+    color:var(--black);
+    cursor: pointer;
+}
+
+/* header content styling */
+.header{
+    min-height: 91vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(../image/home-img.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    
+
+}
+
+/*----------------- header content styling -----------------------*/
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 70%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+   
+    
+}
+
+.text-box p{
+    margin:100px 30px 2px;
+   
+    font-size: 15px;
+    color: #fff;
+   
+
+}
+/*--------------------- header button styling------------------------ */
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    /* color: #fff; */
+    /* border:1px solid #fff; */
+    padding: 15px 155px;
+    font-size: 13px;
+    /* background: transparent; */
+    position: relative;
+    cursor: pointer;
+    align-items: center;
+    background-color: rgb(224, 224, 224);
+    color: rgb(168, 168, 168);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 15px;
+    border-color: rgb(224, 224, 224);
+    border-radius: 4px;
+   
+
+}
+
+input{
+
+    color: rgb(168, 168, 168);
+    padding: 15px 104px;
+    margin-bottom: 16px;
+    /* padding-top: 16px; */
+    /* padding-bottom: 16px; */
+    flex: 1 1 0%;
+    cursor: pointer;
+    border-radius: 4px;
+   
+}
+
+
+/* <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ section two $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ --> */
+
+
+.icons-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap:1.5rem;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    background: rgb(255, 255, 255);
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    margin: 0 111px;
+    box-shadow: var(--box-shadow);
+  
+ 
+}
+
+.icons-container .icons{
+    background:#fff;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    padding:2rem;
+    gap:1.5rem;
+  
+  
+}
+
+.icons-container .icons i{
+    height:5rem;
+    width:5rem;
+    line-height:5rem;
+    font-size:2.5rem;
+    color:var(--black);
+    background:#eee;
+    text-align: center;
+    border-radius: 50%;
+  
+}
+
+.icons-container .icons .content h3{
+    font-size: 2.5rem;
+    color:var(--yellow);
+}
+
+.icons-container .icons .content p{
+    font-size: 1.5rem;
+    color:var(--light-color);
+}
+
+.icons-container img{
+
+    margin: 0 8px;
+    width:  500px;
+    border-radius: 5px;
+
+}
+
+
+/* .icons-container .icons:hover{ 
+    background:var(--black);
+}
+
+.icons-container .icons:hover i{
+    background:var(--yellow);
+}
+
+.icons-container .icons:hover .content h3{
+    color:#fff;
+}
+
+.icons-container .icons:hover .content p{
+    color:#eee;
+/* } 
+
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ section three $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ --> */
+
+.banner{
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); */
+    /* gap:1.5rem; */
+    /* padding-top: 5rem; */
+    padding-bottom: 1rem;
+    background: rgb(255, 255, 255);
+    padding-left: 25em;
+    padding-right: 1.5em;
+    
+    margin: 0 -260px;
+    width:  50px;
+    border-radius: 5px;
+   
+
+}
+
+.banner img{
+    width:  1055px;
+    border-radius: 5px;
+  
+}
+
+
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ section four $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ --> */
+.reffer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap:1.5rem;
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+    background: rgba(219, 217, 217, 0.479);
+    padding-left: 8.5em;
+    padding-right: 8.5em;
+    margin: 0 0;
+  
+ 
+}
+
+.reffer .imge{
+    background:#fff;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    padding:2rem;
+    gap:1.5rem;
+    box-shadow: 10px .8px 20px 10px rgba(160, 157, 157, 0.63) ;
+  
+}
+
+.reffer .imge i{
+    height:5rem;
+    width:5rem;
+    line-height:5rem;
+    font-size:2.5rem;
+    color:var(--black);
+    background:#eee;
+    text-align: center;
+    border-radius: 50%;
+  
+}
+
+.reffer .imge .text h3{
+    font-size: 16px;
+    color:rgba(0,0,0,0.78);
+ 
+}
+
+.reffer .imge .text p{
+    font-size: 14px;
+    color:#666;
+}
+
+.reffer .imge:hover{
+    background:var(--black);
+ 
+}
+
+.reffer .imge:hover i{
+    background:var(--yellow);
+}
+
+.reffer .imge:hover .content h3{
+    color:#fff;
+}
+
+.reffer .icons:hover .content p{
+    color:#eee;
+}
+
+/* <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$  Section five$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->*/
+.offer{
+   
+    
+    padding-top: 2px;
+    padding-bottom: 2rem;
+  
+    padding-left: 8.5em;
+    padding-right: 8.5em;
+    margin: 0 0;
+    
+    
+ 
+
+}
+.offer .box{
+    display: flex;
+    
+   
+}
+/* .offer .box .iag{ 
+    width:  1055px;
+    border-radius: 5px;
+
+}*/
+
+.offer  .iag img{
+
+    margin: 2px 8px;
+    width:  100%;
+    border-radius: 5px;
+    padding: 9px 5px 21px 1px;
+   
+    
+}
+
+
+
+/* <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$  Section five$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+ */
+
+ .about{
+     margin: 0 0;
+     align-items: center;
+     padding-top: 14px;
+     padding-bottom: 14px;
+     background: rgba(238, 235, 235, 0.479);
+     border-top:.01px solid rgba(151, 149, 149, 0.795);
+     border-bottom:.01px solid rgba(151, 149, 149, 0.795) ;
+   
+
+ }
+ .about .con h6{
+     text-align: center;
+     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+     ;
+     font-size: 15px;
+     color:#666;
+    
+ }
+
+/* <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$  Section six$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+ */
+
+ .last{
+    margin: 0 0;
+    align-items: center;
+    /* padding-top: 14px; */
+    /*padding-bottom: 14px; */
+    padding-left: 20px 20px;
+    background: rgba(219, 217, 217, 0.479);
+    
+ }
+ .last .last-con{
+    font-size: 12px;
+    margin: 0 110px;
+   
+     
+ }
+
+/* <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$  footer $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+ */
+.footer{
+    margin: 0 0;
+    align-items: center;
+    padding-left: 20px 20px;
+    background: rgba(219, 217, 217, 0.479);
+    text-decoration: none;
+    
+}
+.footer .credit h4{
+    text-align: center;
+}
+
